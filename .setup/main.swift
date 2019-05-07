@@ -238,7 +238,7 @@ try CustomTextFile
 try CocoaPods
     .Podspec
     .standard(
-        product: masterCocoaPod.product,
+        project: project,
         company: masterCocoaPod.company,
         version: masterCocoaPod.currentVersion,
         license: (license.name, license.location),
@@ -265,7 +265,9 @@ try [modules.mobileViews].forEach{ module in
     try CocoaPods
         .Podspec
         .standard(
-            product: module.product,
+            externalName: module.product.name,
+            internalName: module.product.name,
+            summary: module.product.summary,
             company: masterCocoaPod.company,
             version: masterCocoaPod.currentVersion,
             license: (license.name, license.location),
@@ -311,7 +313,9 @@ try [modules.viewModels].forEach{ module in
     try CocoaPods
         .Podspec
         .standard(
-            product: module.product,
+            externalName: module.product.name,
+            internalName: module.product.name,
+            summary: module.product.summary,
             company: masterCocoaPod.company,
             version: masterCocoaPod.currentVersion,
             license: (license.name, license.location),
@@ -357,7 +361,9 @@ try [modules.models].forEach{ module in
     try CocoaPods
         .Podspec
         .standard(
-            product: module.product,
+            externalName: module.product.name,
+            internalName: module.product.name,
+            summary: module.product.summary,
             company: masterCocoaPod.company,
             version: masterCocoaPod.currentVersion,
             license: (license.name, license.location),
@@ -403,7 +409,9 @@ try [modules.services].forEach{ module in
     try CocoaPods
         .Podspec
         .standard(
-            product: module.product,
+            externalName: module.product.name,
+            internalName: module.product.name,
+            summary: module.product.summary,
             company: masterCocoaPod.company,
             version: masterCocoaPod.currentVersion,
             license: (license.name, license.location),

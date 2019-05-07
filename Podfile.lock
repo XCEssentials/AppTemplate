@@ -1,0 +1,87 @@
+PODS:
+  - HockeySDK/CrashOnlyLib (4.1.6)
+  - MobileViews (0.0.1):
+    - ViewModels
+    - XCEArrayExt
+    - XCEPipeline
+  - MobileViews/MobileViewsTests (0.0.1):
+    - ViewModels
+    - XCEArrayExt
+    - XCEPipeline
+  - Models (0.0.1):
+    - Services
+    - XCEArrayExt
+    - XCEPipeline
+  - Models/ModelsTests (0.0.1):
+    - Services
+    - XCEArrayExt
+    - XCEPipeline
+  - Reveal-SDK (13)
+  - Services (0.0.1):
+    - XCEArrayExt
+    - XCEPipeline
+  - Services/ServicesTests (0.0.1):
+    - XCEArrayExt
+    - XCEPipeline
+  - SwiftLint (0.31.0)
+  - ViewModels (0.0.1):
+    - Models
+    - XCEArrayExt
+    - XCEPipeline
+  - ViewModels/ViewModelsTests (0.0.1):
+    - Models
+    - XCEArrayExt
+    - XCEPipeline
+  - XCEArrayExt (1.1.3)
+  - XCEPipeline (1.2.0):
+    - XCEPipeline/Core (= 1.2.0)
+    - XCEPipeline/Operators (= 1.2.0)
+  - XCEPipeline/Core (1.2.0)
+  - XCEPipeline/Operators (1.2.0):
+    - XCEPipeline/Core
+
+DEPENDENCIES:
+  - HockeySDK/CrashOnlyLib (~> 4.1.0)
+  - MobileViews (from `./`)
+  - MobileViews/MobileViewsTests (from `./`)
+  - Models (from `./`)
+  - Models/ModelsTests (from `./`)
+  - Reveal-SDK (= 13)
+  - Services (from `./`)
+  - Services/ServicesTests (from `./`)
+  - SwiftLint
+  - ViewModels (from `./`)
+  - ViewModels/ViewModelsTests (from `./`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - HockeySDK
+    - Reveal-SDK
+    - SwiftLint
+    - XCEArrayExt
+    - XCEPipeline
+
+EXTERNAL SOURCES:
+  MobileViews:
+    :path: "./"
+  Models:
+    :path: "./"
+  Services:
+    :path: "./"
+  ViewModels:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  HockeySDK: 95db557d54489a570dcdefae0d02f98eecc279a3
+  MobileViews: 24b97af6e700507032bc71a9552c66e2c72725c9
+  Models: 3f86e003a6e848bf7939275768e1ea5ad059ec4e
+  Reveal-SDK: ccc2b0f8014965ea448b7534a7c2c8da232b75e8
+  Services: f85dd4f872ff32a6fd57d4290226d5b45ce3d8e7
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  ViewModels: 5263eb80808560817916824b011d141fc4ed2fb0
+  XCEArrayExt: 881c487e660a23a770b67913776ecac31c12fbe6
+  XCEPipeline: a7c5582e69bc214c4a7aaff851ec4a5412c4954d
+
+PODFILE CHECKSUM: 790e4af6a8045684c1a5623d6c40ff30e2c56cb1
+
+COCOAPODS: 1.6.1

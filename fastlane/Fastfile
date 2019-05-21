@@ -32,7 +32,7 @@ lane :beforeRelease do
     # === Read current version number
 
     versionNumber = version_get_podspec(
-        path: 'AppTemplate.podspec'
+        path: 'Project.spec'
     )
 
     puts 'Current VERSION number: ' + versionNumber
@@ -75,7 +75,7 @@ lane :beforeRelease do
     )
 
     version_bump_podspec(
-        path: 'AppTemplate.podspec',
+        path: 'Project.spec',
         version_number: newVersionNumber
     )
 
@@ -104,7 +104,7 @@ lane :beforeRelease do
     commit_version_bump(
         message: 'Version Bump to ' + newVersionNumber + ' (' + newBuildNumber + ')',
         xcodeproj: 'AppTemplate.xcodeproj',
-        include: ["AppTemplate.podspec", "MobileViews.podspec", "ViewModels.podspec", "Models.podspec", "Services.podspec"]
+        include: ["Project.spec", "MobileViews.podspec", "ViewModels.podspec", "Models.podspec", "Services.podspec"]
     )
 
 end # lane :beforeRelease

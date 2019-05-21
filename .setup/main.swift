@@ -29,13 +29,15 @@ let project = try Spec.Project(
     ]
 )
 
-let mobile = project.deploymentTargets.asPairs()[0]
+let mobile = project.deploymentTargets[0]
 
 let license = (
     text: "Do NOT use any of the code without author's written permission.",
     name: "Proprietary",
     location: Path(Defaults.licenseFileName)
 )
+
+let masterSpecLocation = Defaults.masterSpec
 
 var masterCocoaPod = try Spec.CocoaPod(
     companyInfo: .from(company),
@@ -46,7 +48,7 @@ var masterCocoaPod = try Spec.CocoaPod(
 )
 
 try? masterCocoaPod.readCurrentVersion(
-    callFastlane: .viaBundler
+    specLocation: masterSpecLocation
 )
 
 let modules = try (
@@ -56,7 +58,7 @@ let modules = try (
         summary: "[View] level types according to MVVMSE.",
         deploymentTargets: project
             .deploymentTargets
-            .filter{ $0.key == mobile.platform }
+            .filter{ $0.platform == mobile.platform }
     ),
     viewModels: Spec.Module(
         project: project,
@@ -233,30 +235,19 @@ try CustomTextFile
     )
     .writeToFileSystem()
 
-// MARK: Write - CocoaPods - Podspec MASTER
+// MARK: Write - MASTER Project spec
 
-try CocoaPods
-    .Podspec
-    .standard(
-        project: project,
-        company: masterCocoaPod.company,
-        version: masterCocoaPod.currentVersion,
-        license: (license.name, license.location),
-        authors: masterCocoaPod.authors,
-        swiftVersion: Spec.BuildSettings.swiftVersion.value,
-        globalSettings: {
-            
-            globalContext in
-            
-            //declare support for all defined deployment targets
-            
-            project
-                .deploymentTargets
-                .forEach{ globalContext.settings(for: $0) }
-        }
+try CustomTextFile
+    .init("""
+        app.version = '\(masterCocoaPod.currentVersion)'
+        """
     )
-    .prepare(for: masterCocoaPod)
-    .writeToFileSystem()
+    .prepare(
+        at: masterSpecLocation
+    )
+    .writeToFileSystem(
+        ifFileExists: .skip // only need to write once - the very first time
+    )
 
 // MARK: Write - CocoaPods - Podspecs for modules
 
@@ -329,7 +320,6 @@ try [modules.viewModels].forEach{ module in
                 
                 module
                     .deploymentTargets
-                    .asPairs()
                     .forEach{ podspec.settings(for: $0) }
                 
                 podspec.settings(
@@ -377,7 +367,6 @@ try [modules.models].forEach{ module in
                 
                 module
                     .deploymentTargets
-                    .asPairs()
                     .forEach{ podspec.settings(for: $0) }
                 
                 podspec.settings(
@@ -425,7 +414,6 @@ try [modules.services].forEach{ module in
                 
                 module
                     .deploymentTargets
-                    .asPairs()
                     .forEach{ podspec.settings(for: $0) }
                 
                 podspec.settings(
@@ -494,7 +482,6 @@ try Fastlane
     .defaultHeader()
     .beforeRelease(
         project: project,
-        masterPod: masterCocoaPod,
         otherPodSpecs: allModules
             .map{ $0.podspecLocation }
     )

@@ -6,13 +6,13 @@ import PackageDescription
 let package = Package(
     name: "AppTemplateSetup",
     dependencies: [
-        .package(url: "https://github.com/nvzqz/FileKit", from: "5.2.0"),
-        .package(url: "https://github.com/XCEssentials/RepoConfigurator", from: "2.6.0")
+        .package(url: "https://github.com/kylef/PathKit", from: "1.0.0"),
+        .package(url: "https://github.com/XCEssentials/RepoConfigurator", from: "2.7.0")
     ],
     targets: [
         .target(
             name: "AppTemplateSetup",
-            dependencies: ["XCERepoConfigurator", "FileKit"],
+            dependencies: ["XCERepoConfigurator", "PathKit"],
             path: ".",
             sources: ["main.swift"]
         )

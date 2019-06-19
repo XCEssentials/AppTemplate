@@ -125,17 +125,17 @@ lane :reconfigureProject do
 
     sh 'cd ./.. && bundle exec xcodeproj sort "AppTemplate.xcodeproj"'
 
-    # === Build Phase Script - SwiftLint | 'AppTemplateMobile' | ./../AppTemplate.xcodeproj
+    # === Build Phase Script - SwiftLint | 'AppTemplateMobile' | ../AppTemplate.xcodeproj
 
     begin
 
-        project = Xcodeproj::Project.open("./../AppTemplate.xcodeproj")
+        project = Xcodeproj::Project.open("../AppTemplate.xcodeproj")
 
     rescue => ex
 
         # https://github.com/fastlane/fastlane/issues/7944#issuecomment-274232674
         UI.error ex
-        UI.error("Failed to add Build Phase Script - SwiftLint | 'AppTemplateMobile' | ./../AppTemplate.xcodeproj")
+        UI.error("Failed to add Build Phase Script - SwiftLint | 'AppTemplateMobile' | ../AppTemplate.xcodeproj")
 
     end
 
@@ -160,19 +160,19 @@ lane :reconfigureProject do
 
     project.save()
 
-    UI.success("Added Build Phase Script - SwiftLint | 'AppTemplateMobile' | ./../AppTemplate.xcodeproj")
+    UI.success("Added Build Phase Script - SwiftLint | 'AppTemplateMobile' | ../AppTemplate.xcodeproj")
 
-    # === Build Settings | ./../AppTemplate.xcodeproj
+    # === Build Settings | ../AppTemplate.xcodeproj
 
     begin
 
-        project = Xcodeproj::Project.open("./../AppTemplate.xcodeproj")
+        project = Xcodeproj::Project.open("../AppTemplate.xcodeproj")
 
     rescue => ex
 
         # https://github.com/fastlane/fastlane/issues/7944#issuecomment-274232674
         UI.error ex
-        UI.error("Failed to set Build Settings - ./../AppTemplate.xcodeproj")
+        UI.error("Failed to set Build Settings - ../AppTemplate.xcodeproj")
 
     end
 
@@ -188,19 +188,19 @@ lane :reconfigureProject do
 
     project.save()
 
-    UI.success("Set Build Settings - ./../AppTemplate.xcodeproj")
+    UI.success("Set Build Settings - ../AppTemplate.xcodeproj")
 
-    # === Build Settings | AppTemplateMobile | ./../AppTemplate.xcodeproj
+    # === Build Settings | AppTemplateMobile | ../AppTemplate.xcodeproj
 
     begin
 
-        project = Xcodeproj::Project.open("./../AppTemplate.xcodeproj")
+        project = Xcodeproj::Project.open("../AppTemplate.xcodeproj")
 
     rescue => ex
 
         # https://github.com/fastlane/fastlane/issues/7944#issuecomment-274232674
         UI.error ex
-        UI.error("Failed to set Build Settings - AppTemplateMobile | ./../AppTemplate.xcodeproj")
+        UI.error("Failed to set Build Settings - AppTemplateMobile | ../AppTemplate.xcodeproj")
 
     end
 
@@ -213,7 +213,7 @@ lane :reconfigureProject do
 
         # https://github.com/fastlane/fastlane/issues/7944#issuecomment-274232674
         UI.error ex
-        UI.error("Failed to set Build Settings - AppTemplateMobile | ./../AppTemplate.xcodeproj")
+        UI.error("Failed to set Build Settings - AppTemplateMobile | ../AppTemplate.xcodeproj")
 
     end
 
@@ -241,6 +241,6 @@ lane :reconfigureProject do
 
     project.save()
 
-    UI.success("Set Build Settings - AppTemplateMobile | ./../AppTemplate.xcodeproj")
+    UI.success("Set Build Settings - AppTemplateMobile | ../AppTemplate.xcodeproj")
 
 end # lane :reconfigureProject

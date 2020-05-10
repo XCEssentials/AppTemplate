@@ -551,6 +551,9 @@ try Git
     .framework(
         otherEntries: [
             """
+            # Bundler local cache
+            vendor/bundle
+            
             # we don't need to store any project files,
             # as we generate them on-demand from specs
             *.\(Xcode.Project.extension)

@@ -223,19 +223,19 @@ lane :reconfigureProject do
         config.build_settings['INFOPLIST_FILE'] = 'Info/AppTemplateMobile.plist'
         config.build_settings['PRODUCT_NAME'] = 'AppTemplateAppTemplateMobile'
 
-        if config.name == "Release"
-
-            config.build_settings['CODE_SIGN_IDENTITY'] = 'iPhone Distribution'
-            config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = 'AppTemplate-AdHoc'
-
-        end # config.name == "Release"
-
         if config.name == "Debug"
 
             config.build_settings['CODE_SIGN_IDENTITY'] = 'iPhone Developer'
             config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = 'AppTemplate-Dev'
 
         end # config.name == "Debug"
+
+        if config.name == "Release"
+
+            config.build_settings['CODE_SIGN_IDENTITY'] = 'iPhone Distribution'
+            config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = 'AppTemplate-AdHoc'
+
+        end # config.name == "Release"
 
     end # target.build_configurations.each
 

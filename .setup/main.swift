@@ -557,6 +557,7 @@ try Git
             # we don't need to store any project files,
             # as we generate them on-demand from specs
             *.\(Xcode.Project.extension)
+            *.\(Xcode.Workspace.extension)
             !\(project.name).\(Xcode.Project.extension)
             """
         ]

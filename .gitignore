@@ -142,6 +142,7 @@ vendor/bundle
 # we don't need to store any project files,
 # as we generate them on-demand from specs
 *.xcodeproj
+*.xcworkspace
 !AppTemplate.xcodeproj
 
 ### Custom repo-specific ###

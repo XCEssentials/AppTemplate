@@ -98,12 +98,12 @@ let targets = (
         },
         packageType: .app
     ),
-    none: () // to keep the 'targets' as tuple even if we have on 1 target
+    none: () // to have it as tuple even if we have only 1 nested member
 )
 
 let targetedDeviceFamilyFor = ( // per target
     app: DeviceFamily.iOS.phone, // NO iPad support yet!
-    none: () // to keep the 'targets' as tuple even if we have on 1 target
+    none: () // to have it as tuple even if we have only 1 nested member
 )
 
 let sharedPodDependencies: [String] = [
@@ -182,13 +182,15 @@ try ReadMe()
         # \(project.name)
 
         \(project.summary)
-
+        
         """
     )
     .prepare(
         removeRepeatingEmptyLines: false
     )
-    .writeToFileSystem()
+    .writeToFileSystem(
+        ifFileExists: .skip // ONLY write once, then maintain Readme directly!
+    )
 
 // MARK: Write - SwiftLint
 

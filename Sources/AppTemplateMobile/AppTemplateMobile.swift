@@ -17,6 +17,10 @@ extension AppTemplateMobile: UIApplicationDelegate
         didFinishLaunchingWithOptions options: [UIApplication.LaunchOptionsKey: Any]?
         ) -> Bool
     {
+        window = .init()
+        window?.rootViewController = .init()
+        window?.rootViewController?.view.backgroundColor = .green
+        window?.makeKeyAndVisible()
         return true
     }
 }

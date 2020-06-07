@@ -54,7 +54,7 @@ DEPENDENCIES:
   - ViewModels/ViewModelsTests (from `./`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - HockeySDK
     - Reveal-SDK
     - SwiftLint
@@ -73,15 +73,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   HockeySDK: 95db557d54489a570dcdefae0d02f98eecc279a3
-  MobileViews: 24b97af6e700507032bc71a9552c66e2c72725c9
-  Models: 3f86e003a6e848bf7939275768e1ea5ad059ec4e
+  MobileViews: f6bece8bea2a8adf90860532179fcadb9f22fc5b
+  Models: 9c9f8eb3286b126f2c688acb9fe78873a076466f
   Reveal-SDK: ccc2b0f8014965ea448b7534a7c2c8da232b75e8
-  Services: f85dd4f872ff32a6fd57d4290226d5b45ce3d8e7
+  Services: 35a1fe552490f60d5b7e3753e708feccdb3b96ca
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
-  ViewModels: 5263eb80808560817916824b011d141fc4ed2fb0
+  ViewModels: e994bf1750742ecaa9d72d403fe24b4c66738c8b
   XCEArrayExt: 881c487e660a23a770b67913776ecac31c12fbe6
   XCEPipeline: a7c5582e69bc214c4a7aaff851ec4a5412c4954d
 
 PODFILE CHECKSUM: 790e4af6a8045684c1a5623d6c40ff30e2c56cb1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.3

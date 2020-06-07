@@ -111,6 +111,8 @@ let sharedPodDependencies: [String] = [
     "XCEArrayExt"
 ]
 
+let bundlePath = "vendor/bundle"
+
 // MARK: Parameters - Summary
 
 localRepo.report()
@@ -136,7 +138,7 @@ try [
             )
             .writeToFileSystem(
                 ifFileExists: .skip
-        )
+            )
 }
 
 try allSubspecs
@@ -153,6 +155,19 @@ try allSubspecs
                 ifFileExists: .skip
             )
     }
+
+// MARK: Write - Bundler - Config
+
+try CustomTextFile
+    .init("""
+        ---
+        BUNDLE_PATH: "\(bundlePath)"
+        """
+    )
+    .prepare(
+        at: ".bundle" + "config"
+    )
+    .writeToFileSystem()
 
 // MARK: Write - Bundler - Gemfile
 

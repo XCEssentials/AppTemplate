@@ -115,7 +115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94226ECF2281E256007E7952 /* Build configuration list for PBXNativeTarget "AppTemplateMobile" */;
 			buildPhases = (
-				C6FA73F750F84D81D1DEB26B /* SwiftLint */,
+				BF74991E944C1FFE5C201390 /* SwiftLint */,
 				BC5347719ABD33E6A3AF5FB1 /* [CP] Check Pods Manifest.lock */,
 				94226EB92281E254007E7952 /* Sources */,
 				94226EBA2281E254007E7952 /* Frameworks */,
@@ -184,28 +184,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppTemplateMobile/Pods-AppTemplateMobile-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MobileViews/MobileViews.framework",
-				"${BUILT_PRODUCTS_DIR}/Models/Models.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
-				"${BUILT_PRODUCTS_DIR}/Services/Services.framework",
-				"${BUILT_PRODUCTS_DIR}/ViewModels/ViewModels.framework",
-				"${BUILT_PRODUCTS_DIR}/XCEArrayExt/XCEArrayExt.framework",
-				"${BUILT_PRODUCTS_DIR}/XCEPipeline/XCEPipeline.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-AppTemplateMobile/Pods-AppTemplateMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobileViews.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Models.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Services.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewModels.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCEArrayExt.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCEPipeline.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-AppTemplateMobile/Pods-AppTemplateMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -234,7 +217,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6FA73F750F84D81D1DEB26B /* SwiftLint */ = {
+		BF74991E944C1FFE5C201390 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,16 +241,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppTemplateMobile/Pods-AppTemplateMobile-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-AppTemplateMobile/Pods-AppTemplateMobile-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-AppTemplateMobile/Pods-AppTemplateMobile-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

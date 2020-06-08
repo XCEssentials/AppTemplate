@@ -11,7 +11,7 @@ print("--- BEGIN of '\(Executable.name)' script ---")
 
 // MARK: Parameters
 
-Spec.BuildSettings.swiftVersion.value = "4.2"
+Spec.BuildSettings.swiftVersion.value = "5.2"
 
 let localRepo = try Spec.LocalRepo.current()
 
@@ -25,7 +25,7 @@ let project = try Spec.Project(
     summary: "The greates app idea ever",
     copyrightYear: 2019,
     deploymentTargets: [
-        .iOS : "9.0"
+        .iOS : "13.0"
     ]
 )
 

@@ -15,13 +15,13 @@ Pod::Spec.new do |s|
         'Maxim Khatskevich' => 'maxim@khatskevi.ch'
     } # authors
 
-    s.swift_version = '4.2'
+    s.swift_version = '5.2'
 
     s.cocoapods_version = '>= 1.7.0'
 
     # === ios
 
-    s.ios.deployment_target = '9.0'
+    s.ios.deployment_target = '13.0'
 
     s.dependency 'XCEPipeline'
     s.dependency 'XCEArrayExt'

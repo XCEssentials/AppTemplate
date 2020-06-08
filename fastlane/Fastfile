@@ -179,9 +179,9 @@ lane :reconfigureProject do
     project.build_configurations.each do |config|
 
         config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'YES'
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
         config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = '$(FRAMEWORK_SEARCH_PATHS) $(BUILT_PRODUCTS_DIR)'
-        config.build_settings['SWIFT_VERSION'] = '4.2'
+        config.build_settings['SWIFT_VERSION'] = '5.2'
         config.build_settings['TARGETED_DEVICE_FAMILY'] = '1'
 
     end # project.build_configurations.each

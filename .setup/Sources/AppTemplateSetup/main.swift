@@ -522,7 +522,7 @@ try Fastlane
             try $0.projectLevel(
                 project: project.location,
                 shared: [
-                    "SWIFT_VERSION" : Spec.BuildSettings.swiftVersion,
+                    Spec.BuildSettings.swiftVersion.key : Spec.BuildSettings.swiftVersion.value,
                     "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" : YES,
                     "IPHONEOS_DEPLOYMENT_TARGET" : targets.app.deploymentTarget.minimumVersion,
                     "TARGETED_DEVICE_FAMILY" : targetedDeviceFamilyFor.app,

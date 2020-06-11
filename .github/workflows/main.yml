@@ -38,5 +38,5 @@ jobs:
     #     echo Add other actions to build,
     #     echo test, and deploy your project.
 
-  test:
+  # test:
     #build and test using Xcode - Fastlane action "run_tests(...)"
